@@ -88,27 +88,21 @@ const evolvedPokemon = pokemon.filter (value => ["Ivysaur", "Charmeleon", "Warto
 Exercise 8
 1. Print the name of each Pokémon in your party.
 2. Consider using a loop or an array method to access each Pokémon's name.
-
 Solve Exercise 8 here:
 */
-const mappedPokenmon = pokemon.map (pokemonValue => {
-    return 'Exercise 8 is ${game.party.name}';
-});
-
-
+const mappedPokenmon = game.party.map (pokemon =>
+    `Exercise 8 is ${pokemon.name}`);
+console.log(mappedPokenmon);
+//why it keep printing "undefined"?
 
 /*
 Exercise 9
 1. Can you print out all the starter Pokémon from the `pokemon` array?
 2. Think about how you can identify a starter Pokémon and then log their names.
-
-
 Solve Exercise 9 here:
 */
 
-
-
-
+const starterPokenmon = 
 
 
 
