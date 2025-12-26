@@ -39,7 +39,7 @@ Solve Exercise 4 here:
 game.party = pokemon.filter ((item) => {
     return item.starter === true;
 });
-console.log (game.party)
+console.log (game.party);
 
 /*
 Exercise 5
@@ -62,7 +62,7 @@ Solve Exercise 6 here:
 */
 for (let eachValue of game.gyms) {
         if (eachValue.difficulty < 3) {
-            eachValue.completed = true;
+            eachValue.completed = true
     };
 };
 console.log(game.gyms); 
@@ -91,9 +91,8 @@ Exercise 8
 Solve Exercise 8 here:
 */
 const mappedPokenmon = game.party.map (pokemon =>
-    `Exercise 8 is ${pokemon.name}`);
+    pokemon.name);
 console.log(mappedPokenmon);
-//why it keep printing "undefined"?
 
 /*
 Exercise 9
@@ -102,9 +101,10 @@ Exercise 9
 Solve Exercise 9 here:
 */
 
-const starterPokenmon = 
-
-
+const starterPokemon = pokemon.filter (item => item.starter === true);
+const starterPokemonName = starterPokemon.map (item => item.name); 
+console.log(starterPokemonName);
+      
 
 /*
 Exercise 10
@@ -118,10 +118,12 @@ After writing this method, call it and pass in a Pokemon object of your choice f
 Solve Exercise 10 here:
 */
 
+game.catchPokemon = (pokemonObj) => { 
+  game.party.push(pokemonObj);
+};
 
-
-
-
+game.catchPokemon ("Raichu");
+console.log (game.party);
 
 /*
 Exercise 11
@@ -136,12 +138,14 @@ Also, log the `game.items` array to confirm that the pokeball quantity is being 
 Solve Exercise 11 here:
 */
 
+game.catchPokemon = (pokemonObj) => { 
+  game.party.push(pokemonObj);  
+};
 
+return game.items.pokeball.quantity.length - 1;
 
-
-
-
-
+game.catchPokemon ("Raichu");
+console.log (game.party);
 
 
 /*
