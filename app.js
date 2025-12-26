@@ -140,13 +140,17 @@ Solve Exercise 11 here:
 
 game.catchPokemon = (pokemonObj) => { 
   game.party.push(pokemonObj);  
+  
+ for (let value of game.items) {
+  if (value.name === "pokeball") {
+    value.quantity -= 1;
+  }
+  }
 };
 
-return game.items.pokeball.quantity.length - 1;
-
-game.catchPokemon ("Raichu");
+game.catchPokemon (pokemon[1]);
 console.log (game.party);
-
+console.log (game.items);
 
 /*
 Exercise 12
@@ -156,9 +160,12 @@ Exercise 12
 Solve Exercise 12 here:
 */
 
-
-
-
+for (let belowSix of game.gyms) {
+  if (belowSix.difficulty < 6) {
+    belowSix.completed = true 
+  };
+};
+console.log(game.gyms); 
 
 /*
 Exercise 13
@@ -183,6 +190,8 @@ For example, if five gym objects have a value of `true` on their `completed` pro
 Solve Exercise 13 here:
 */
 
+const gymTally = ["complete", "incomplete"]
+let gymStatus => 
 
 
 /*
