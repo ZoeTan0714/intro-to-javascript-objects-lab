@@ -192,19 +192,20 @@ Solve Exercise 13 here:
 
 game.gymStatus = function () {
   const gymTally =  {
-    complete = 0,  
-    incomplete = 0}
-}
+    completed: 0,  
+    incomplete: 0}
  
-game.gyms.forEach (
-  if (gyms.completed = true) {
-    gymTally.complete++
+game.gyms.forEach (eachValue => {
+  if (eachValue.completed === true) {
+    gymTally.completed++
   } else {
     gymTally.incomplete++
   }
-  ); 
-  game.gymStatus();
+  }); 
   console.log (gymTally);
+}
+
+game.gymStatus();
 
 /*
 Exercise 14
@@ -217,9 +218,12 @@ This method should:
 
 Solve Exercise 14 here:
 */
+game.party = game.party.flat();
 
-
-
+game.partyCount = function () {
+  return game.party.length;
+};
+console.log(game.partyCount ());
 
 /*
 Exercise 15
@@ -229,8 +233,12 @@ Exercise 15
 Solve Exercise 15 here:
 */
 
-
-
+game.gyms.forEach (belowEight => {
+    if(belowEight.difficulty < 8) {
+    belowEight.completed = true}
+}
+);
+console.log(game.gyms);
 
 
 /*
@@ -241,6 +249,7 @@ Exercise 16
 Solve Exercise 16 here:
 */
 
+console.log(game);
 
 
 
